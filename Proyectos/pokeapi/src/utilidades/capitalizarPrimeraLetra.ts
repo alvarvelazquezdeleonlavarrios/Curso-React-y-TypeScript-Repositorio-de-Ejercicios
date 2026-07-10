@@ -1,0 +1,1 @@
+export const capitalizarPrimeraLetra = (cadena: string) => cadena.charAt(0).toUpperCase() + cadena.slice(1);

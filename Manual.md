@@ -26,12 +26,26 @@
 1. Escribir en el CMD o Terminal el comando `npm create vite@latest nombre-proyecto -- --template react-ts`
 2. En caso de que pida instalar paquetes y dependencias que hagan falta, escribir que sí con `y`
 
-### Ejecutar proyectos de React
+### Ejecutar proyectos de React Vite.js
 
 1. Posicionarse dentro de la carpeta del proyecto con el comando `cd`
 2. Ejecutar el comando `npm run dev`
 3. Copiar y pegar la URL del campo **Local** en un navegador web
 4. Para detener la ejecución del localhost, presionar las teclas Ctrl + C
+
+
+## Crear un proyecto React manualmente
+
+1. Definir todas las dependencias a instalar en el archivo package-json
+2. Ejecutar el comando `npm i`
+
+### Ejecutar proyectos de React configurados manualmente
+
+1. Posicionarse dentro de la carpeta del proyecto con el comando `cd`
+2. Ejecutar el comando `npm start`
+3. Copiar y pegar la URL del campo **Local** en un navegador web
+4. Para detener la ejecución del localhost, presionar las teclas Ctrl + C
+
 
 ### Instalar Tailwind 3 (y otras bibliotecas) en un proyecto de React
 
