@@ -1,6 +1,7 @@
 import React from "react";
 
 interface iGrid {
+    // El atributo "children" en el componente Grid hace refercia a todos los objetos HTML hijos de este
     children: React.ReactNode;
     irPaginaSiguiente?: () => void;
     irPaginaAnterior?: () => void;
