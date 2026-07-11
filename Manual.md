@@ -46,6 +46,12 @@
 3. Copiar y pegar la URL del campo **Local** en un navegador web
 4. Para detener la ejecución del localhost, presionar las teclas Ctrl + C
 
+### Ejecutar pruebas unitarias en proyectos de React configurados manualmente
+
+1. Asegurarse que estén instaladas las dependencias necesarias para ejecutar Jest
+2. Configurar el archivo `setupTests.ts` en la carpeta src
+3. Asegurarse que los archivos de los tests unitarios se encuentren en sus carpetas `__tests__` correspondientes
+4. Ejecutar el comando `npm run test`
 
 ### Instalar Tailwind 3 (y otras bibliotecas) en un proyecto de React
 

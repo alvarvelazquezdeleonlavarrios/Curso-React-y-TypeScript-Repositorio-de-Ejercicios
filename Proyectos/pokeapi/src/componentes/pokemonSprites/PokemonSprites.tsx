@@ -11,19 +11,27 @@ export const PokemonSprites: React.FC<iPokemonSprites> = ({pokemonNombre}) => {
     return (
         <div className="flex flex-row">
             <div>
-                <h6 className="text-2x1 text-center">Normal</h6>
-                <div className="flex">
-                    <img src={pokemonData?.sprites?.front_default} alt={pokemonData?.name ?? ""} className="mx-auto"/>
-                    <img src={pokemonData?.sprites?.back_default} alt={pokemonData?.name ?? ""} className="mx-auto"/>
-                </div>
+                {pokemonData?.sprites?.front_default && (
+                    <>
+                    <h6 className="text-2x1 text-center">Normal</h6>
+                    <div className="flex">
+                        <img src={pokemonData?.sprites?.front_default} alt={`${pokemonData?.name ?? ""} front default`} className="mx-auto"/>
+                        <img src={pokemonData?.sprites?.back_default} alt={`${pokemonData?.name ?? ""} back default`} className="mx-auto"/>
+                    </div>
+                    </>
+                )}
             </div>
 
             <div>
-                <h6 className="text-2x1 text-center">Brillante</h6>
-                <div className="flex">
-                    <img src={pokemonData?.sprites?.front_shiny} alt={pokemonData?.name ?? ""} className="mx-auto"/>
-                    <img src={pokemonData?.sprites?.back_shiny} alt={pokemonData?.name ?? ""} className="mx-auto"/>
-                </div>
+                {pokemonData?.sprites?.front_shiny && (
+                    <>
+                    <h6 className="text-2x1 text-center">Brillante</h6>
+                    <div className="flex">
+                        <img src={pokemonData?.sprites?.front_shiny} alt={`${pokemonData?.name ?? ""} front shiny`} className="mx-auto"/>
+                        <img src={pokemonData?.sprites?.back_shiny} alt={`${pokemonData?.name ?? ""} back shiny`} className="mx-auto"/>
+                    </div>
+                    </>
+                )}
             </div>
         </div>
     );

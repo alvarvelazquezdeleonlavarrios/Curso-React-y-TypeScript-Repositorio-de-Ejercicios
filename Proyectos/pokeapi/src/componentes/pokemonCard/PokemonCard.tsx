@@ -34,7 +34,7 @@ export const PokemonCard: React.FC<iPokemonCard> = ({pokemon, pokemonId}) => {
     }
 
     return (
-        <div className={`${pokemonMainType}-background relative w-56 h-56 rounded-lg shadow-lg p-4 cursor-pointer`}>
+        <div className={`${pokemonMainType}-background relative w-56 h-56 rounded-lg shadow-lg p-4 cursor-pointer`} data-testid="pokemon-card">
             
             <BotonFavorito pokemonId={pokemonData?.id}/>
             <TypeIcons tiposPokemon={pokemonData?.types ?? []}/>
