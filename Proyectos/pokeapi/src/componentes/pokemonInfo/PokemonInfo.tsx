@@ -5,9 +5,11 @@ import { getPokemonMainType } from "../../utilidades/getPokemonMainType";
 import { capitalizarPrimeraLetra } from "../../utilidades/capitalizarPrimeraLetra";
 import { librasAKilogramos, pulgadasACentimetros } from "../../utilidades/convertirSistemaInternacionalUnidades";
 import { PokemonSprites } from "../pokemonSprites/PokemonSprites";
+import { TypeIcons } from "../../compartidos/typeIcons/TypeIcons";
+
 
 export const PokemonInfo = () => {
-    // El nombre de esta variable debe coincider con el nombre del parámetro definido en index.tsx
+    // El nombre de esta variable debe coincidir con el nombre del parámetro definido en index.tsx
     const {pokemonName} = useParams();
 
     const {pokemonData} = useGetPokemon(pokemonName);
@@ -20,7 +22,11 @@ export const PokemonInfo = () => {
             </div>
 
             <div className="flex flex-col grow p-5 gap-3">
-                <h1 className="text-3x1">{capitalizarPrimeraLetra(pokemonData?.name ?? "")}</h1>
+                <div className="relative flex">
+                    <h1 className="text-3x1">{capitalizarPrimeraLetra(pokemonData?.name ?? "")}</h1>
+                    <TypeIcons tiposPokemon={pokemonData?.types ?? []}/>
+                </div>
+                
                 <span>{`Peso: ${librasAKilogramos(pokemonData?.weight ?? 0)} Kg`}</span>
                 <span>{`Altura: ${pulgadasACentimetros(pokemonData?.height ?? 0)} cm`}</span>
                 <PokemonSprites pokemonNombre={pokemonName} />

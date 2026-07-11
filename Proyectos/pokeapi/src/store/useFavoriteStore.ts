@@ -13,7 +13,7 @@ export const useFavoriteStore = create<iFavoriteStore>((set) => ({
     // Función que agrega un pokemon favorito a la lista
     addFavorito: (id: string) => set((favoriteStore) => {
         // Trae los favoritos anteriores, y le agrega el nuevo a la derecha del arreglo
-        const favoritos = [...favoriteStore.favoritos, id];
+        const favoritos = localStorage.getItem("favorite-pokemons") !== "" ? [...favoriteStore.favoritos, id] : [id];
         localStorage.setItem("favorite-pokemons", favoritos.join(","));
         return {favoritos};
     }),
