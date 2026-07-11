@@ -1,0 +1,2 @@
+// URL utilizada para ejecutar pruebas integradoras si el entorno es en producción, o si es en el entorno local
+export const url = process.env.NODE_ENV === "production" ? "https://react-coures-topaz.vercel.app/" : "http://localhost:8080/";

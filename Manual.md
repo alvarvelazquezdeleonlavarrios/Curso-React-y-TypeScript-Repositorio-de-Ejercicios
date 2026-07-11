@@ -53,6 +53,16 @@
 3. Asegurarse que los archivos de los tests unitarios se encuentren en sus carpetas `__tests__` correspondientes
 4. Ejecutar el comando `npm run test`
 
+### Ejecutar pruebas integradoras en proyectos de React configurados manualmente
+
+1. Ejecutar el comando `npm init playwright@latest`
+2. Contestar a la pregunta "Where to put your end-to-end tests?" con **e2e**
+3. Contestar a la pregunta "Add a GitHub Actions workflow?" con **y**
+4. Contestar a la pregunta "Install Playwright browsers?" con **y**
+5. Configurar el archivo `playwright.config.ts` modificando la url en webServer, y definiendo en qué navegadores se van a ejecutar las pruebas
+6. Ejecutar el comando `npm run test:e2e` para ejecutar las pruebas al instante
+7. Si se quiere debugear las pruebas, paso por paso, ejecutar el comando `npm run test:e2e-debug`. Se abrirán dos ventanas: el navegador a probar y el PlayWright Inspector. En el PlayWright Inspector ir dando clic en el botón de paso siguiente para que las pruebas se vayan ejeutando paso a paso en el navegador actual.
+
 ### Instalar Tailwind 3 (y otras bibliotecas) en un proyecto de React
 
 1. Posicionarse dentro de la carpeta del proyecto con el comando `cd`

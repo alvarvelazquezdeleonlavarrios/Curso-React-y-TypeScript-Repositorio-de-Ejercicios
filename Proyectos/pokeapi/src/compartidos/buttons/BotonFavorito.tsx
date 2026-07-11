@@ -16,7 +16,7 @@ export const BotonFavorito: React.FC<iBotonFavorito> = ({pokemonId}) => {
         esFavorito ? deleteFavorito(idModificar) : addFavorito(idModificar);
     }
 
-    return <button className="bg-white p-1 rounded-full absolute top-2 left-2" onClick={onClick}>
+    return <button className="bg-white p-1 rounded-full absolute top-2 left-2" onClick={onClick} data-testid="favorite-button">
         {esFavorito ? <FaHeart fill="#EF4444"/> : <FaRegHeart fill="#EF4444"/>}
     </button>
 };

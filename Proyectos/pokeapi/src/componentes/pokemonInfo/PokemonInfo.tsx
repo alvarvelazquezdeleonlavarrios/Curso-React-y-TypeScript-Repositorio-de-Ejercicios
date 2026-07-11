@@ -16,7 +16,7 @@ export const PokemonInfo = () => {
     const mainType = useMemo(() => pokemonData && getPokemonMainType(pokemonData), [pokemonData]);
 
     return (
-        <div className="flex flex-row justify-between shadow-lg bg-gray-100 rounded-lg">
+        <div className="flex flex-row justify-between shadow-lg bg-gray-100 rounded-lg" data-testid="pokemon-info">
             <div className={`${mainType}-background w-72 h-72 rounded-l-lg items-center`}>
                 <img src={pokemonData?.sprites?.front_default} alt={pokemonData?.name ?? ""} className="mx-auto w-72 h-72"/>
             </div>

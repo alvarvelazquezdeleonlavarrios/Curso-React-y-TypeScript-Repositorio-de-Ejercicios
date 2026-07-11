@@ -15,7 +15,7 @@ export const TypeIcons: React.FC<iTypeIcons> = ({tiposPokemon}) => {
     return (
         <div className="absolute top-2 right-2 gap-2 cursor-pointer">
             {tiposPokemon.map((tipoPokemon) => (
-                <div key={tipoPokemon.type.name} className="bg-white p-1 rounded-full w-6 h-6 mb-1" onClick={() => onClick(tipoPokemon)}>
+                <div key={tipoPokemon.type.name} className="bg-white p-1 rounded-full w-6 h-6 mb-1" onClick={() => onClick(tipoPokemon)} data-testid="type-icon">
                     <img src={mapearTipoAIcono(tipoPokemon)} alt={`${tipoPokemon.type.name} icon`}/>
                 </div>
             )) }

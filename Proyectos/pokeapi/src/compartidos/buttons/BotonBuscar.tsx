@@ -6,6 +6,6 @@ export const BotonBuscar = () => {
     const openModal = useSearchStore((state) => state.openModal);
 
     return (
-        <button onClick={openModal}>Buscar</button>
+        <button onClick={openModal} data-testid='search-button'>Buscar</button>
     );
 }
